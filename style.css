@@ -19,10 +19,6 @@ body {
   background-color: #f8f9fb;
 }
 
-header,
-main,
-aside {
-}
 
 header,
 aside {
@@ -703,9 +699,6 @@ header .right select {
   }
   header {
     height: 20vw;
-    display: flex;
-    align-content: flex-end;
-    flex-wrap: wrap;
   }
   
   header .container{
@@ -773,9 +766,6 @@ h2{
 .portfolio .statistic .columns .column:nth-of-type(9),
 .portfolio .statistic .columns .column:nth-of-type(10) {
   display: none;
-}
-.portfolio .statistic .columns{
-  
 }
 .assets .coins .coin {
   padding-top: 5%;
