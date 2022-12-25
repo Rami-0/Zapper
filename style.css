@@ -41,7 +41,7 @@ header {
 main {
   grid-area: m;
   display: grid;
-  grid-template-rows: 0.2fr 0.9fr 1.7fr  1fr;
+  grid-template-rows: 0.2fr 0.9fr 1.7fr 1fr;
   grid-template-areas:
     "o o o o o o o o o o o o"
     "n n n n n n i i i e e e"
@@ -85,7 +85,7 @@ main > div {
   width: 10%;
   height: 100%;
   min-width: 130px;
-  min-height: 40px; 
+  min-height: 40px;
 }
 .overview h2 {
   font-size: 1.5em;
@@ -158,8 +158,6 @@ main > div {
   justify-content: flex-end;
 }
 
-
-
 .income {
   grid-area: i;
   display: flex;
@@ -219,11 +217,11 @@ main > div {
 }
 
 .expenses {
-    grid-area: e;
-    display: flex;
-    align-content: flex-start;
-    padding: 10%;
-    align-items: center;
+  grid-area: e;
+  display: flex;
+  align-content: flex-start;
+  padding: 10%;
+  align-items: center;
 }
 
 .expenses p {
@@ -295,8 +293,8 @@ main > div {
   min-height: 38px;
   max-width: 120px;
 }
-.portfolio .title .button img{
-    margin-left: 5px;
+.portfolio .title .button img {
+  margin-left: 5px;
 }
 .portfolio .money {
   height: 75%;
@@ -307,11 +305,11 @@ main > div {
   color: #899bbe;
   font-size: 0.96em;
 }
-.mounthly-statistic{
-    display: flex;
-    width: 100%;
-    height: 95%;
-    align-items: center;
+.mounthly-statistic {
+  display: flex;
+  width: 100%;
+  height: 95%;
+  align-items: center;
 }
 .portfolio .statistic {
   width: 85%;
@@ -504,8 +502,8 @@ main > div {
   min-height: 38px;
   max-width: 120px;
 }
-.transactions .title .button img{
-    margin-left: 5px;
+.transactions .title .button img {
+  margin-left: 5px;
 }
 .transactions-list {
   width: 100%;
@@ -673,4 +671,124 @@ header .right {
 header .right select {
   border: none;
   outline: none;
+}
+
+#burger{
+  display: none;
+}
+
+@media (max-width: 576px) {
+  body {
+    display: grid;
+    grid-template-rows: 10vh 90vh;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "h"
+      "m";
+    background-color: #f8f9fb;
+  }
+  header .input-wrapper,
+  header .right {
+    display: none !important;
+  }
+  #burger{
+    display: block;
+    width: fit-content;
+  }
+  #burger img{
+    width: 1.6em;
+  }
+  header .input-wrapper img:nth-of-type(1) {
+    width: 20px !important;
+  }
+  header {
+    height: 20vw;
+    display: flex;
+    align-content: flex-end;
+    flex-wrap: wrap;
+  }
+  
+  header .container{
+    height: 60%;
+    align-self:center;
+  }
+
+  aside {
+    display: none;
+  }
+  main {
+    grid-area: m;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "o"
+      "n"
+      "i"
+      "e"
+      "p"
+      "t"
+      "a";
+    
+    padding: 15px;
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+  }
+
+  .networth {
+    grid-area: n;
+    display: flex;
+    min-height: 193px;
+    padding: 6%;
+  }
+  main > div{
+    height: fit-content;
+    padding: 5% !important;
+  }
+  main > div:nth-of-type(1){
+    padding: 0 !important;
+  }
+  .networth .right{
+    display: none;
+  }
+
+  .networth .left {
+    width: 100%;
+    height: auto;
+    align-items: center;
+}
+.networth .left h2 {
+  width: 55%;
+  font-size: 4vh;
+}
+.portfolio {
+  height: 400px !important;
+}
+.portfolio .money{
+  width: 20%;
+}
+h2{
+  font-size: 18px;
+}
+.portfolio .statistic .columns .column:nth-of-type(9),
+.portfolio .statistic .columns .column:nth-of-type(10) {
+  display: none;
+}
+.portfolio .statistic .columns{
+  
+}
+.assets .coins .coin {
+  padding-top: 5%;
+}
+.assets .coins .coin:last-of-type {
+  border: none;
+}
+.transactions {
+  height: 200px;
+}
+.portfolio .title .button ,
+.transactions .title .button {
+  width: 25% !important;
+}
+
 }
