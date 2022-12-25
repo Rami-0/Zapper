@@ -702,8 +702,7 @@ header .right select {
   }
   
   header .container{
-    height: 60%;
-    align-self:center;
+    width: 85%;
   }
 
   aside {
